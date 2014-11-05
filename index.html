@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Teste Admatic</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="text/javascript" src="js/angular.min.js"></script>
+</head>
+
+<body ng-app="githubList">
+	<div id="hold-content-github" ng-controller="GithubProject">
+		<section ng-init="listProjects" class="menu">
+			<h1>Projetos</h1>
+			<nav>
+				<ul>
+					<li ng-repeat="projects in listProjects | orderBy:'-stars'">
+						<a ng-href="#/{{projects.name}}" ng-click="changeContent(projects)">{{projects.name}}</a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+
+		<section class="content" ng-show="showCommits">
+			<header>
+				<ul class="list-attributes">
+					<li class="left">Stars: {{newContent.stars}}</li>
+					<li class="center">Forks: {{newContent.forks}}</li>
+					<li class="right">Contribs: {{newContent.contributors}}</li>
+				</ul>
+			<header>
+			<nav>
+				<ul class="info-commit">
+					<li ng-repeat="commits in newContent.commits | limitTo:commitsLength*currentCommitsPage">
+						<img ng-src="{{commits.author.avatar_url}}">
+						<div class="hold-commit-text">
+							<h3><span>{{commits.commit.message}}</span></h3>
+							<p class="commit-author">@{{commits.commit.author.name}}</p>
+						</div>
+						<p class="commit-date">{{commits.commit.author.date | date:'dd/MM/yyyy HH:mm:ss'}}</p>
+					</li>
+					<a href="" id="bt-load-more" ng-hide="currentCommitsPage >= newContent.commits.length/commitsLength - 1" ng-click="currentCommitsPage=currentCommitsPage+1">Carregar mais</a>
+				<ul>
+			</nav>
+		</section>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+ 	<script type="text/javascript" src="js/github-list.js"></script>
+</body>
+</html>

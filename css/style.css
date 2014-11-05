@@ -1,0 +1,30 @@
+*{padding: 0; margin: 0; text-decoration: none; list-style: none;}
+
+body{background: #4d78e8; /* Old browsers */
+background: -moz-linear-gradient(left,  #4d78e8 0%, #4d78e8 37%, #ffffff 37%, #ffffff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#4d78e8), color-stop(37%,#4d78e8), color-stop(37%,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #4d78e8 0%,#4d78e8 37%,#ffffff 37%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #4d78e8 0%,#4d78e8 37%,#ffffff 37%,#ffffff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #4d78e8 0%,#4d78e8 37%,#ffffff 37%,#ffffff 100%); /* IE10+ */
+background: linear-gradient(to right,  #4d78e8 0%,#4d78e8 37%,#ffffff 37%,#ffffff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d78e8', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+#hold-content-github{font-family: sans-serif; padding: 30px 0; overflow: hidden;}
+  .menu{float:left; color: #fff; text-align: right; padding-right: 20px; padding-left: 15%; width: 20%}
+    .menu h1{font-size: 40px; margin-bottom: 20px;}
+    .menu li{margin-bottom: 10px;}
+      .menu a{color: #fff; font-size: 20px;}
+        .menu a:hover{text-decoration: underline;}
+  .content{padding-top: 13px; color: #656565; width: 46%; padding-right: 15%; float: right;}
+    .list-attributes li{ font-size: 22px; overflow: hidden; margin-bottom: 30px; width: 32%}
+      .left{text-align: left; float: left;}
+      .center{text-align: center; float: left;}
+      .right{text-align: right; float: right;}
+    .info-commit li{border: 1px solid #ededed; margin-bottom: 10px; clear: both; height: 40px; padding: 10px;}
+    .info-commit img{float: left; width: 40px; margin-right: 15px;}
+    .hold-commit-text{float: left;}
+      .info-commit h3 span{font-size: 16px; overflow:hidden; width: 270px; height: 20px; display: inline-block; white-space: nowrap; text-overflow: ellipsis;}
+      .info-commit .commit-author{font-size: 14px;}
+    .info-commit .commit-date{float: right; font-size: 11px;}
+    #bt-load-more{background-color: #cccccc; display: block; width: 100%; text-align: center; color: #fff; font-size: 14px; padding: 10px 0}
